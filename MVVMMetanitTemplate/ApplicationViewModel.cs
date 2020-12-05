@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using System.Windows.Interactivity;
 
 
 namespace MVVMMetanitTemplate
@@ -55,6 +56,33 @@ namespace MVVMMetanitTemplate
                  (obj) => Phones.Count > 0));
             }
         }
+
+        //************************************
+        private RelayCommand doubleCommand;
+        public RelayCommand DoubleCommand
+        {
+            get
+            {
+                return doubleCommand ??
+                    (doubleCommand = new RelayCommand(obj =>
+                    {
+                        Phone phone = obj as Phone;
+                        if (phone != null)
+                        {
+                            Phone phoneCopy = new Phone
+                            {
+                                Company = phone.Company,
+                                Price = phone.Price,
+                                Title = phone.Title
+                            };
+                            Phones.Insert(0, phoneCopy);
+                        }
+                    }));
+            }
+        }
+
+
+
 
         public Phone SelectedPhone
         {

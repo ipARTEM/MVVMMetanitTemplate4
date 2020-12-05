@@ -23,6 +23,7 @@ namespace MVVMMetanitTemplate
             get { return title; }
             set
             {
+                // обработка изменения свойства
                 title = value;
                 OnPropertyChanged("Title");
             }
