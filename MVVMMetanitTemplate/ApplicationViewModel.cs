@@ -9,7 +9,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.CommandWpf;
+
 
 namespace MVVMMetanitTemplate
 {
