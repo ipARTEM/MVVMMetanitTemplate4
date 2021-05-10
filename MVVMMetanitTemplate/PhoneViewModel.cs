@@ -12,12 +12,19 @@ namespace MVVMMetanitTemplate
 {
     public class PhoneViewModel : INotifyPropertyChanged
     {
+
+        //*****************************************************
+        /// <summary>
+        /// Копирование свойств !!!! 
+        /// </summary>
         private Phone phone;
 
         public PhoneViewModel(Phone p)
         {
             phone = p;
         }
+        //*****************************************************
+
 
         public string Title
         {

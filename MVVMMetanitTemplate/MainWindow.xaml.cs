@@ -24,7 +24,7 @@ namespace MVVMMetanitTemplate
         {
             InitializeComponent();
 
-            DataContext = new ApplicationViewModel();
+            DataContext = new ApplicationViewModel(new DefaultDialogService(), new JsonFileService());
         }
     }
 }
